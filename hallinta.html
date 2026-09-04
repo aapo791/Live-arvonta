@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arvonnan Hallinta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #141414;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      border: 2px solid #e50914;
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: #e50914;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:disabled { background: #555; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Hallinta</h2>
+    <label for="max-num">Maksiminumero:</label>
+    <input type="number" id="max-num" value="100" min="1" />
+    <button id="start-btn">KÄYNNISTÄ ARVONTA</button>
+  </div>
+
+  <script src="hallinta.js"></script>
+</body>
+</html>
