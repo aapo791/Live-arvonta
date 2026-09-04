@@ -2,18 +2,32 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Live Arvonta</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <img src="dffcdba2-3519-47e8-8d09-11b95e4eebcf.JPG" alt="Logo" class="logo" />
-
-  <div class="display-container">
-    <div id="number-display">?</div>
+  <!-- VAIHE 1: Numeron syöttö -->
+  <div id="step-setup" class="setup-container">
+    <div class="card">
+      <h2>LIVE ARVONTA</h2>
+      <label for="max-number">Syötä maksiminumero (1–X):</label>
+      <input type="number" id="max-number" value="100" min="1" />
+      <button id="start-btn">SIIRRY ARVONTAAN</button>
+    </div>
   </div>
 
-  <div></div>
+  <!-- VAIHE 2 & 3: Arvontaruutu -->
+  <div id="step-draw" class="draw-container hidden">
+    <img src="dffcdba2-3519-47e8-8d09-11b95e4eebcf.JPG" alt="Logo" class="logo" />
+
+    <div class="display-container" id="click-area">
+      <div id="number-display">?</div>
+    </div>
+
+    <div id="instruction-text" class="instruction">KLIKKAA NÄYTTÖÄ ALOITTAAKSESI ARVONNAN</div>
+  </div>
 
   <script src="script.js"></script>
 </body>
